@@ -39,16 +39,29 @@ body {
     font-style: normal;
 }
 
+.main {
+    width: 80%;
+    height: 80%;
+}
+
+.mainHeading {
+    height: 100%;
+    width: 20%;
+}
+
 .img {
     width: 115%;
     height: auto;
 }
-.img img{
+
+.img img {
     width: 100%;
     height: auto;
 }
 
 .glassEffect {
+    height: 100%;
+    width: 80%;
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     background-image: linear-gradient(rgba(99, 71, 255, 0.192), rgba(253, 77, 139, 0.299));
@@ -95,7 +108,7 @@ textarea {
     border: 1px solid linear-gradient(to right, rgb(77, 0, 128), rgb(0, 0, 159));
 }
 
-.settingBtn{
+.settingBtn {
     background-color: rgba(96, 81, 179, 0.192);
     padding: 8px 12px;
     border-right: 1px solid rgb(30, 56, 109);
@@ -106,25 +119,26 @@ textarea {
 }
 
 @media (min-width: 360px) and (max-width:800px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        padding: 5vh 5vw 15vh 5vw;
+    }
+
     .main {
-        width: 90vw;
-        height: 95vh;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
     }
 
     .mainHeading {
         width: 100%;
-        height: 10%;
+        height: 20%;
         display: flex;
-        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        gap: 7px;
-        margin-top: 10%;
-    }
-
-    .mainHeading span {
-        font-size: xx-large;
     }
 
     .img {
@@ -132,10 +146,10 @@ textarea {
     }
 
     .glassEffect {
-        height: 50%;
+        height: 60%;
         width: 100%;
-        position: relative;
-        top: 12%;
+        /* position: relative;
+        top: 12%; */
     }
 
     .mainContent {
